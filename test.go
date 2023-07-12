@@ -1,12 +1,11 @@
 package main
 
-import "fmt"
-// import (
-// 	"fmt"
-// 	"runtime"
+import (
+	"fmt"
+	"runtime"
 
-// 	"rsc.io/quote"
-// )
+	"rsc.io/quote"
+)
 
 func main() {
         fmt.Printf("Go version: %s\n", runtime.Version())
