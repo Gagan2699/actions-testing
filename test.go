@@ -7,9 +7,13 @@ package actions
 // 	"rsc.io/quote"
 // )
 
-func Demo() {
-	fmt.Printf("Go version: %s\n", runtime.Version())
+func main() {
+        fmt.Printf("Go version: %s\n", runtime.Version())
 	fmt.Printf("GOOS: %s\n", runtime.GOOS)
-
-	fmt.Println(quote.Go())
 }
+// func Demo() {
+// 	fmt.Printf("Go version: %s\n", runtime.Version())
+// 	fmt.Printf("GOOS: %s\n", runtime.GOOS)
+
+// 	fmt.Println(quote.Go())
+// }
