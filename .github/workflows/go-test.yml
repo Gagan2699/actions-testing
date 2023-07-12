@@ -1,7 +1,7 @@
 on: 
  push:
   branches:
-   - 'go-test'
+   - go-test
   
 name: Go-Test
 jobs:
