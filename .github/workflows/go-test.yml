@@ -13,6 +13,7 @@ jobs:
     - uses: actions/setup-go@v4
       with:
         go-version: ${{ matrix.go-version }}
+    - run : go mod init go-test
     - run: go run .
 
 #   test-cache:
