@@ -1,6 +1,4 @@
-on:
- push:
-  branches: [go-test]
+on: push
   
 name: Go-Test
 jobs:
