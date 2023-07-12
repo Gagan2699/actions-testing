@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"runtime"
-
-	"rsc.io/quote"
 )
 
 func main() {
