@@ -9,5 +9,9 @@ jobs:
     runs-on: self.hosted
     steps:
     - uses: actions/checkout@master
-    - uses: jge162/Action-Workflows@2.1.0
+    - name: PyInstaller Linux amd64
+      id: amd64
+      uses: action-python/pyinstaller-py3.7@amd64
+      with:
+        path: .
  
