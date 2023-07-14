@@ -1,17 +1,14 @@
 on: 
  push:
-  paths:
-    -'**.py'
+#   paths:
+#     -'**.py'
     
 name: Python-Test
 jobs:
   test:
     runs-on: self.hosted
     steps:
-    - uses: actions/checkout@master
-    - name: PyInstaller Linux amd64
-      id: amd64
-      uses: action-python/pyinstaller-py3.7@amd64
-      with:
-        path: .
+    - uses: actions/checkout@v3     
+    - uses: actions/setup-python@v4.7.0
+    - run: python3 test.py
  
