@@ -2,3 +2,11 @@ on:
  push:
   paths:
     -'**.py'
+    
+name: Python-Test
+jobs:
+  test:
+    runs-on: self.hosted
+    steps:
+    - uses: jge162/Action-Workflows@2.1.0
+ 
