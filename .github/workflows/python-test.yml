@@ -13,4 +13,12 @@ jobs:
     - uses: DataDog/action-py-black-formatter@v2.5
     - uses: actions/setup-python@v4.7.0
     - run: python3 test.py
+  
+    - name: slack-send
+      if: ${{ failure() }}
+      uses: slackapi/slack-github-action@v1.24.0
+      with:
+       channel-id: C05HGSF75L1
+       slack-message: Run failed
+  
  
