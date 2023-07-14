@@ -1,7 +1,7 @@
 on: 
  push:
-#   paths:
-#     -'**.py'
+  paths:
+    -'**.py'
     
 name: Python-Test
 jobs:
