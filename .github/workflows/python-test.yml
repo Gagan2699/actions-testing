@@ -19,7 +19,7 @@ jobs:
       id: slack
       env:
        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
-     
+       SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
 #     - uses: act10ns/slack@v2.0.0
 #       if: failure()
 #       with:
