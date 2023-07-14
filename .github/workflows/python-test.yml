@@ -14,12 +14,15 @@ jobs:
     - uses: actions/setup-python@v4.7.0
     - run: python3 test.py
   
-    - name: slack-send
-      if: ${{ failure() }}
-      uses: slackapi/slack-github-action@v1.24.0
-      with:
-       channel-id: C05HGSF75L1
-       slack-message: Run failed
-       webhook-url: https://hooks.slack.com/services/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
+  slack-send:
+    if: ${{ failure() }}
+    runs-on: self-hosted
+    steps:
+     - uses: slackapi/slack-github-action@v1.24.0
+       with:
+        webhook-url: https://hooks.slack.com/services/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
+        channel: C05HGSF75L1
+        slack-message: Run failed
+      
   
  
