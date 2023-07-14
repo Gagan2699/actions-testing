@@ -3,4 +3,4 @@ import sys
 
 
 
-print(os.environ)
+print(os.environ+ 'ENV')
