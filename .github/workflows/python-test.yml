@@ -20,5 +20,6 @@ jobs:
       with:
        channel-id: C05HGSF75L1
        slack-message: Run failed
+       webhook-url: https://hooks.slack.com/services/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
   
  
