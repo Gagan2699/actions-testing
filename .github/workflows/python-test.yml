@@ -13,16 +13,23 @@ jobs:
     - uses: DataDog/action-py-black-formatter@v2.5
     - uses: actions/setup-python@v4.7.0
     - run: python3 test.py
+    - uses: slackapi/slack-github-action@v1.24.0
+      if: failure()
+      with:
+       webhook-url: https://hooks.slack.com/services/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
+       channel: C05HGSF75L1
+       slack-message: Run failed
+    
   
-  slack-send:
-    if: ${{ failure() }}
-    runs-on: self-hosted
-    steps:
-     - uses: slackapi/slack-github-action@v1.24.0
-       with:
-        webhook-url: https://hooks.slack.com/services/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
-        channel: C05HGSF75L1
-        slack-message: Run failed
+#   slack-send:
+#     if: ${{ failure() }}
+#     runs-on: self-hosted
+#     steps:
+#      - uses: slackapi/slack-github-action@v1.24.0
+#        with:
+#         webhook-url: https://hooks.slack.com/services/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
+#         channel: C05HGSF75L1
+#         slack-message: Run failed
       
   
  
